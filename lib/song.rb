@@ -43,7 +43,6 @@ class Song
   end
   
   def self.alphabetical
-   songs =  @@all.collect{|track| track.name}
-   songs.sort!
+   @@all.sort_by{|track| track.name}
   end
 end
