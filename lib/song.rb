@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
   attr_accessor :name, :artist_name
   @@all = []
@@ -47,6 +49,6 @@ class Song
   end
   
   def self.new_from_filename(mp3)
-    
+    array = mp3.split("-")
   end
 end
