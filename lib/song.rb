@@ -50,7 +50,8 @@ class Song
   
   def self.new_from_filename(mp3)
     array = mp3.split(" - ")
-    del = array[-1].delete (/[.mp3]/)
+    name = array[-1].chomp(".mp3")
+    artist = array[0]
     binding.pry
   end
 end
