@@ -34,11 +34,11 @@ class Song
     @@all.each.find{|track| track.name == name}
   end
   
-  def self.find_or_create_by_name(name)
-    if self.find_by_name(name)
-      name.name
+  def self.find_or_create_by_name(track)
+    if self.find_by_name(track)
+      track.name
     else
-      self.create_by_name(name)
+      self.create_by_name(track)
     end
   end
 end
