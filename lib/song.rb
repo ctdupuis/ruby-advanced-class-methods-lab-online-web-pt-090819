@@ -50,5 +50,6 @@ class Song
   
   def self.new_from_filename(mp3)
     array = mp3.split("-")
+    binding.pry
   end
 end
