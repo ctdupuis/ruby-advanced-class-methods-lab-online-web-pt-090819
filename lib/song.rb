@@ -48,10 +48,11 @@ class Song
    @@all.sort_by{|track| track.name}
   end
   
-  def self.new_from_filename(mp3)
-    array = mp3.split(" - ")
-    name = array[-1].chomp(".mp3")
-    artist = array[0]
+  def self.new_from_filename(file)
+   song = self.new 
+   song.name = file.split(" - ")[-1].chomp(".mp3")
+   song.artist_name = file.split(" - ")[0]
+   song
     binding.pry
   end
 end
